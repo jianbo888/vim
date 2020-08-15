@@ -13,23 +13,23 @@ autocmd Filetype python setlocal expandtab tabstop=4 shiftwidth=4
 set tags=./.tags;,.tags
 
 " enable gtags module
-let g:gutentags_modules = ['ctags', 'gtags_cscope']
+"let g:gutentags_modules = ['ctags', 'gtags_cscope']
 
 " config project root markers.
-let g:gutentags_project_root = ['.root', '.git']
+"let g:gutentags_project_root = ['.root', '.git']
 
-let g:gutentags_ctags_tagfile = '.tags'
+"let g:gutentags_ctags_tagfile = '.tags'
 
 " generate datebases in my cache directory, prevent gtags files polluting my
 " project
-let g:gutentags_cache_dir = expand('~/.cache/tags')
+"let g:gutentags_cache_dir = expand('~/.cache/tags')
 
-let g:gutentags_ctags_extra_args = ['--fields=+niazS', '--extra=+q']
-let g:gutentags_ctags_extra_args += ['--c++-kinds=+px']
-let g:gutentags_ctags_extra_args += ['--c-kinds=+px']
+"let g:gutentags_ctags_extra_args = ['--fields=+niazS', '--extra=+q']
+"let g:gutentags_ctags_extra_args += ['--c++-kinds=+px']
+"let g:gutentags_ctags_extra_args += ['--c-kinds=+px']
 
 " change focus to quickfix window after search (optional).
-let g:gutentags_plus_switch = 1
+"let g:gutentags_plus_switch = 1
 
 "if !isdirectory(s:vim_tags)
 	"silent! call mkdir(s:vim_tags, 'p')
@@ -73,8 +73,8 @@ call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/nerdtree'
 
 " Tag auto geneartor
-Plug 'ludovicchabant/vim-gutentags'
-Plug 'skywind3000/gutentags_plus'
+"Plug 'ludovicchabant/vim-gutentags'
+"Plug 'skywind3000/gutentags_plus'
 
 Plug 'skywind3000/asyncrun.vim'
 
@@ -92,6 +92,8 @@ Plug 'ycm-core/YouCompleteMe'
 
 Plug 'Yggdroot/LeaderF'
 Plug 'Shougo/echodoc.vim'
+Plug 'tpope/vim-fugitive'
+Plug 'ctrlpvim/ctrlp.vim'
 
 " Initialize plugin system
 call plug#end()"
@@ -105,6 +107,7 @@ let g:ycm_collect_identifiers_from_comments_and_strings = 1
 let g:ycm_complete_in_strings=1
 let g:ycm_key_invoke_completion = '<c-z>'
 set completeopt=menu,menuone
+let g:ycm_use_clangd = 1
 
 noremap <c-z> <NOP>
 
