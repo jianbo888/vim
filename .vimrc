@@ -1,5 +1,5 @@
 syntax on
-set nonumber
+set number
 set ruler
 
 set tabstop=4
@@ -10,7 +10,7 @@ set laststatus=2 " show status line always
 autocmd Filetype cpp setlocal expandtab tabstop=2 shiftwidth=2
 autocmd Filetype python setlocal expandtab tabstop=4 shiftwidth=4
 
-set tags=./.tags;,.tags
+"set tags=./.tags;,.tags
 
 " enable gtags module
 "let g:gutentags_modules = ['ctags', 'gtags_cscope']
@@ -95,6 +95,14 @@ Plug 'Shougo/echodoc.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'ctrlpvim/ctrlp.vim'
 
+" color schema
+Plug 'drewtempelmeyer/palenight.vim'
+Plug 'morhetz/gruvbox'
+Plug 'tomasr/molokai'
+Plug 'tomasr/molokai'
+Plug 'kyoz/purify'
+Plug 'gosukiwi/vim-atom-dark'
+
 " Initialize plugin system
 call plug#end()"
 
@@ -133,3 +141,6 @@ let g:Lf_ShowRelativePath = 0
 let g:Lf_HideHelp = 1
 let g:Lf_StlColorscheme = 'powerline'
 let g:Lf_PreviewResult = {'Function':0, 'BufTag':0}
+
+
+colorscheme atom-dark-256
